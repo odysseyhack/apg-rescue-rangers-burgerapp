@@ -1,0 +1,22 @@
+- /e2e/.*
+- /src/assets/.*
+- /src/environments/.*
+
+- /.editorconfig
+- /.gitignore
+- /angular.json
+- /package-lock.json
+- /package.json
+- /README.md
+- /tsconfig.json
+- /tslint.json
+- /yarn.lock
+- /src/browserslist
+- /src/favicon.ico
+- /src/karma.conf.js
+- /src/main.ts
+- /src/polyfills.ts
+- /src/test.ts
+- /src/tsconfig.app.json
+- /src/tsconfig.spec.json
+- /src/tslint.json
