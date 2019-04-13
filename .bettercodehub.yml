@@ -21,3 +21,5 @@ exclude:
 - .*/src/tsconfig.app.json
 - .*/src/tsconfig.spec.json
 - .*/src/tslint.json
+
+component_depth: 2
