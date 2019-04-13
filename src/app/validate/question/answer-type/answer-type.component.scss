@@ -1,0 +1,87 @@
+@import '../../../../styles.scss';
+
+
+$object-name: 'inputfield';
+
+$inputfield-height: 40px;
+$inputfield-max-width: 100%;
+$inputfield-color: white;
+$inputfield-color-inactive: white;
+$label-size: 14px;
+
+/* =============================================================================
+	BASE
+============================================================================= */
+
+.answer-type {
+    margin: 0 50px;
+    position: relative;
+
+    &__text {
+        position: relative;
+        display: block;
+        max-width: $inputfield-max-width;
+        margin: 30px 0;
+    
+        &--input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $inputfield-color-inactive;
+            outline: none;
+            padding: 10px;
+            background: transparent;
+            color: white;
+    
+            &:focus ~ label,
+            &:valid ~ label {
+                top: -10px;
+                font-size: ($label-size / 4) * 3;
+                color: $inputfield-color;
+            }
+    
+            &:focus ~ span {
+                width: 100%;
+                left: 0;
+            }
+    
+        }
+    
+        &--label {
+            position: absolute;
+            color: $inputfield-color-inactive;
+            font-size: $label-size;
+            z-index: 1;
+            pointer-events: none;
+            transition: all 200ms ease-in-out;
+            top: 10px;
+            left: 10px;
+        }
+
+        &--button {
+            margin: 25px auto 0 auto;
+            display: block;
+            padding: 10px 20px;
+            border-radius: 27px;
+            border: 5px solid white;
+            background: transparent;
+            color: white;
+            outline: none;
+        }
+    
+    }
+
+    &__statement {
+        text-align: center;
+
+        img {
+            height: 75px;
+            cursor: pointer;
+            border-radius: 100%;
+
+            &:first-child {
+                margin-right: 25px;
+            }
+
+        }
+    }
+}

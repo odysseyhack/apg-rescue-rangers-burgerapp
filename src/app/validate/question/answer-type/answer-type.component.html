@@ -1,3 +1,17 @@
-<p>
-  answer-type works!
-</p>
+<div class="row">
+	<div class="col-12">
+		<div class="container" [ngSwitch]="questionType">
+			<div class="answer-type">
+				<div *ngSwitchCase="'text'" class="answer-type__text">
+					<input #answerInput (keydown)="getAnswerInput(answerInput)" class="answer-type__text--input" type="text" min="1" required />
+					<label class="answer-type__text--label">Antwoord</label>
+					<button *ngIf="inputValue.length !== 0" (click)="onhandleButton(answerInput)" class="answer-type__text--button">{{ 'buttonText' }}</button>
+				</div>
+				<div *ngSwitchCase="'statement'" class="answer-type__statement">
+					<img (click)="onHandleThumbsUp()" src="../../../../assets/img/thumbs-up.svg" alt="Thumbs up" />
+					<img (click)="onHandleThumbsDown()" src="../../../../assets/img/thumbs-down.svg" alt="Thumbs down" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

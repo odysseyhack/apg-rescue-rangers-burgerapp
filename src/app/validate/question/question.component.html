@@ -1,2 +1,4 @@
-<h2>Heeft u een raar geluid waargenomen?</h2>
-<app-answer-type></app-answer-type>
+<h2>{{ questionData[currentQuestion ? currentQuestion : 0].question }}</h2>
+<app-answer-type
+    [questionType]="questionData[currentQuestion ? currentQuestion : 0].questionType"
+></app-answer-type>
