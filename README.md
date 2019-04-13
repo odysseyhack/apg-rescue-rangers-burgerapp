@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/odysseyhack/apg-rescue-rangers-burgerapp?branch=master&token=d31a38b82e06978b4df1ccaba5a3843135a46bae)](https://bettercodehub.com/)
+
 # Odyssey
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
