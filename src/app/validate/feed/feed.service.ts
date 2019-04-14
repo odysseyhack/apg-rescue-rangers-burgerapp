@@ -21,7 +21,7 @@ export class FeedService {
           title: 'Er is een foto geüpload',
           content: {
             type: 'img',
-            link: 'https://images4.persgroep.net/rcs/j1guLlWrFi0ZDa0mzNnS05b8cJw/diocontent/133477868/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.9'
+            link: 'https://images4.persgroep.net/rcs/UiptBAr21Ossx_uL-XIt0cE99dc/diocontent/117620393/_fitwidth/694/?appId=21791a8992982cd8da851550a453bd7f&quality=0.9'
           }
         }
       },
