@@ -34,19 +34,19 @@ export class AnswerTypeComponent implements OnInit {
   }
 
   onHandleThumbsUp() {
-    this.answers.push(true);
+    this.answers.push({id: 1026674423292669957, answer: 1});
     this.incrementCurrentQuestion();
     // Next question + save the answer
   }
 
   onHandleThumbsDown() {
-    this.answers.push(false);
+    this.answers.push({id: 1026684904749387776, answer: 0});
     this.incrementCurrentQuestion();
     // Next question + save the answer
   }
 
   onhandleButton(e) {
-    this.answers.push(e.value);
+    this.answers.push({id: 1026655799286923264, answer: e.value});
     this.incrementCurrentQuestion();
   }
 
@@ -59,6 +59,7 @@ export class AnswerTypeComponent implements OnInit {
       this.currentQuestion++;
       this.questionService.currentQuestion.emit(this.currentQuestion);
     } else {
+      // API CALL SENT ALL ANSWERS
       this.router.navigate(['/validate-feed', this.uuid]);
     }
   }
