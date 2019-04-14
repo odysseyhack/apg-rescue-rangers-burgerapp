@@ -27,10 +27,6 @@ const routes: Routes = [
   {
     path: 'inform/:id',
     component: InformComponent
-  },
-  {
-    path: '**',
-    redirectTo: '/'
   }
 ];
 

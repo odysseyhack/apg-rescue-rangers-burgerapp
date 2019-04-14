@@ -12,6 +12,6 @@ class="block block--inform">
 <h5>valideer data van mensen</h5>
 <div class="feed__time">
     <img src="../../../assets/img/clock.svg" alt="Clock icon" />
-    <p>{{ dateObj | date: 'medium' }}</p>
+    <p>{{ this.timelineData[0].generalContent.date | date: 'medium' }}</p>
 </div>
 <app-timeline></app-timeline>
