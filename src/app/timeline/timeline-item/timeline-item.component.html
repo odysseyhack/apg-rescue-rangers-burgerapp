@@ -21,14 +21,14 @@
 			</div>
 		</div>
 	</div>
-	<div *ngIf="timelineData.timelineValidate; else location">
+	<div *ngIf="timelineData.generalContent.timelineValidate; else location">
 		<button class="timeline-item__btn">True</button>
 		<button class="timeline-item__btn">False</button>
 	</div>
 	<ng-template #location>
 		<div class="timeline-item__location">
 			<img src="../../../assets/img/pinpoint.svg" alt="Locationm pin point" />
-			<span>{{ timelineData.location }}</span>
+			<span>{{ timelineData.generalContent.location }}</span>
 		</div>
 	</ng-template>
 </div>

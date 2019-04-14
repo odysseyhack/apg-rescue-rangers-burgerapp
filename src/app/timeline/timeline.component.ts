@@ -24,6 +24,7 @@ export class TimelineComponent implements OnInit {
     this.url = this.router.url.split('/')[1];
     this.getValidatedData = this.url === 'inform' ? false : true;
     this.timelineData = this.feedService.getTimelineData(this.getValidatedData);
+    console.log(this.timelineData);
   }
 
 }

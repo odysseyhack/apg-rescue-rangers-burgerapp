@@ -1,0 +1,43 @@
+@import '../../styles.scss';
+
+.block {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &--content {
+        display: block;
+        margin: 0 auto;
+        color: white;
+        text-align: center;
+        padding: 0 15px;
+
+        h3 {
+            width: 125px;
+        }
+        
+        img {
+            width: 62.5px;
+            padding-bottom: 12.5px;
+        }
+    }
+
+    &--inform {
+        background-color: $app-light-blue;
+    }
+
+    &--camera {
+        background-color: $app-red;
+    }
+
+    &--voice {
+        background-color: $app-yellow;
+    }
+
+    &--message {
+        background-color: $app-dark-blue;
+    }
+
+}

@@ -39,6 +39,21 @@ export class FeedService {
             text: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et.'
           }
         }
+      },
+      {
+        generalContent: {
+          timelineValidate: true,
+          incident: 'Brand distributie centrum',
+          location: 'Landhaven 1, Kampen',
+          date: 1555202998001,
+        },
+        timelineContent: {
+          title: 'Er is een gesproken bericht achter gelaten',
+          content: {
+            type: 'voice',
+            text: ''
+          }
+        }
       }
     ];
   }
