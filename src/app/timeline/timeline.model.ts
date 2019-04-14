@@ -7,7 +7,8 @@ export interface TimelineContent {
     };
 }
 
-export class FeedTimeline {
+export class Timeline {
+    public timelineValidate: boolean;
     public incident: string;
     public location: string;
     public date: number;
@@ -15,8 +16,9 @@ export class FeedTimeline {
 
     constructor(
         incident: string, location: string, date: number,
-        timelineContent: TimelineContent
+        timelineContent: TimelineContent, timelineValidate: boolean
     ) {
+        this.timelineValidate = timelineValidate;
         this.incident = incident;
         this.location = location;
         this.date = date;

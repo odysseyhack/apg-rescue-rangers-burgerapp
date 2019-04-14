@@ -5,6 +5,7 @@ import { ValidateComponent } from './validate/validate.component';
 import { SupplyDataComponent } from './supply-data/supply-data.component';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './validate/feed/feed.component';
+import { InformComponent } from './inform/inform.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'supply-data',
     component: SupplyDataComponent
+  },
+  {
+    path: 'inform/:id',
+    component: InformComponent
   },
   {
     path: '**',

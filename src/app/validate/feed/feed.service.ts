@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 
-import { FeedTimeline } from './feed-timeline/feed-timeline.model';
+import { Timeline } from '../../timeline/timeline.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class FeedService {
-  timelineData: FeedTimeline[];
+  timelineData: Timeline[];
 
   constructor() {
     this.timelineData = [
       {
+        timelineValidate: false,
         incident: 'Brand distributie centrum',
         location: 'Landhaven 1, Kampen',
         date: 1555212798001,
@@ -21,6 +24,7 @@ export class FeedService {
         }
       },
       {
+        timelineValidate: true,
         incident: 'Brand distributie centrum',
         location: 'Landhaven 1, Kampen',
         date: 1555202998001,
@@ -35,8 +39,11 @@ export class FeedService {
     ];
   }
 
-  getTimelineData() {
-    return this.timelineData;
+  getTimelineData(dataType: boolean) {
+    const newArray =  this.timelineData.filter((el) => {
+      return el.timelineValidate === dataType;
+    });
+    return newArray;
   }
 
 }

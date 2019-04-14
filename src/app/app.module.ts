@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,17 +11,14 @@ import { NavigationComponent } from './validate/question/navigation/navigation.c
 import { AnswerTypeComponent } from './validate/question/answer-type/answer-type.component';
 import { SupplyDataComponent } from './supply-data/supply-data.component';
 import { InformComponent } from './inform/inform.component';
-import { DetectIncidentComponent } from './inform/detect-incident/detect-incident.component';
 import { WhatToDoComponent } from './inform/what-to-do/what-to-do.component';
 import { WhatToDoItemComponent } from './inform/what-to-do/what-to-do-item/what-to-do-item.component';
-import { TimelineComponent } from './inform/timeline/timeline.component';
-import { TimelineItemComponent } from './inform/timeline/timeline-item/timeline-item.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { TimelineItemComponent } from './timeline/timeline-item/timeline-item.component';
 import { ModalComponent } from './modal/modal.component';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './validate/feed/feed.component';
 import { FeedNavComponent } from './validate/feed/feed-nav/feed-nav.component';
-import { FeedTimelineComponent } from './validate/feed/feed-timeline/feed-timeline.component';
-import { FeedTimelineItemComponent } from './validate/feed/feed-timeline/feed-timeline-item/feed-timeline-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +29,6 @@ import { FeedTimelineItemComponent } from './validate/feed/feed-timeline/feed-ti
     AnswerTypeComponent,
     SupplyDataComponent,
     InformComponent,
-    DetectIncidentComponent,
     WhatToDoComponent,
     WhatToDoItemComponent,
     TimelineComponent,
@@ -39,14 +36,13 @@ import { FeedTimelineItemComponent } from './validate/feed/feed-timeline/feed-ti
     ModalComponent,
     HomeComponent,
     FeedComponent,
-    FeedNavComponent,
-    FeedTimelineComponent,
-    FeedTimelineItemComponent
+    FeedNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
