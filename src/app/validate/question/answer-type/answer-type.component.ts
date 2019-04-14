@@ -16,7 +16,10 @@ export class AnswerTypeComponent implements OnInit {
   inputValue = '';
   buttonText: string;
 
-  constructor(private questionService: QuestionService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private questionService: QuestionService,
+              private router: Router,
+              private activatedRoute: ActivatedRoute
+            ) { }
 
   ngOnInit() {
     this.questionService.currentQuestion.subscribe((current) => {

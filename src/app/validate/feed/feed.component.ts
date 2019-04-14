@@ -33,11 +33,11 @@ export class FeedComponent implements OnInit {
     this.getValidatedData = this.url === 'inform' ? false : true;
     this.timelineData = this.feedService.getTimelineData(this.getValidatedData);
     if (this.timelineData[0]) {
-      this.title = this.timelineData[0].incident;
-      this.dateObj = this.timelineData[0].date;
+      this.title = this.timelineData[0].generalContent.incident;
+      this.dateObj = this.timelineData[0].generalContent.date;
       this.basicInfo = {
-        incident: this.timelineData[0].incident,
-        locatie: this.timelineData[0].location
+        incident: this.timelineData[0].generalContent.incident,
+        locatie: this.timelineData[0].generalContent.location
       }
     }
   }

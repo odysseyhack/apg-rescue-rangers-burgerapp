@@ -25,8 +25,8 @@ export class InformComponent implements OnInit {
     this.timelineData = this.feedService.getTimelineData(this.getValidatedData);
     if (this.timelineData) {
       this.dataObj = {
-        incident: this.timelineData[0].incident,
-        location: this.timelineData[0].location
+        incident: this.timelineData[0].generalContent.incident,
+        location: this.timelineData[0].generalContent.location
       };
     }
   }

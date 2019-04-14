@@ -11,10 +11,12 @@ export class FeedService {
   constructor() {
     this.timelineData = [
       {
-        timelineValidate: false,
-        incident: 'Brand distributie centrum',
-        location: 'Landhaven 1, Kampen',
-        date: 1555212798001,
+        generalContent: {
+          incident: 'Brand distributie centrum',
+          timelineValidate: false,
+          location: 'Landhaven 1, Kampen',
+          date: 1555212798001,
+        },
         timelineContent: {
           title: 'Er is een foto geuüpload',
           content: {
@@ -24,10 +26,12 @@ export class FeedService {
         }
       },
       {
-        timelineValidate: true,
-        incident: 'Brand distributie centrum',
-        location: 'Landhaven 1, Kampen',
-        date: 1555202998001,
+        generalContent: {
+          timelineValidate: true,
+          incident: 'Brand distributie centrum',
+          location: 'Landhaven 1, Kampen',
+          date: 1555202998001,
+        },
         timelineContent: {
           title: 'Er is een bericht achter gelaten',
           content: {
@@ -41,7 +45,7 @@ export class FeedService {
 
   getTimelineData(dataType: boolean) {
     const newArray =  this.timelineData.filter((el) => {
-      return el.timelineValidate === dataType;
+      return el.generalContent.timelineValidate === dataType;
     });
     return newArray;
   }

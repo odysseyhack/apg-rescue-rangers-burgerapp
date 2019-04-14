@@ -1,3 +1,10 @@
+export interface GeneralContent {
+    incident: string;
+    location: string;
+    date: number;
+    timelineValidate: boolean;
+}
+
 export interface TimelineContent {
     title: string;
     content: {
@@ -8,17 +15,11 @@ export interface TimelineContent {
 }
 
 export class Timeline {
-    public timelineValidate: boolean;
-    public incident: string;
-    public location: string;
-    public date: number;
+    public generalContent: GeneralContent;
     public timelineContent: TimelineContent;
 
-    constructor(incident: string, location: string, date: number, timelineContent: TimelineContent, timelineValidate: boolean) {
-        this.timelineValidate = timelineValidate;
-        this.incident = incident;
-        this.location = location;
-        this.date = date;
+    constructor(generalContent: GeneralContent, timelineContent: TimelineContent) {
+        this.generalContent = generalContent;
         this.timelineContent = timelineContent;
     }
 }
