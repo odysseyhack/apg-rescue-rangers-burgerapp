@@ -1,3 +1,17 @@
-<p>
-  feed works!
-</p>
+
+<a 
+routerLink="/inform/{{ data.id }}"
+class="block block--inform">
+    <div class="block--content">
+        <img class="img-fluid" src="../assets/img/inform.svg" alt="Inform icon" />
+    </div>
+</a>
+<app-feed-nav
+    [dataObj]="basicInfo"
+></app-feed-nav>
+<h5>valideer data van mensen</h5>
+<div class="feed__time">
+    <img src="../../../assets/img/clock.svg" alt="Clock icon" />
+    <p>{{ dateObj | date: 'medium' }}</p>
+</div>
+<app-feed-timeline></app-feed-timeline>

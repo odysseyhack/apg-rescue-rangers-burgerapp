@@ -14,6 +14,7 @@ export class AnswerTypeComponent implements OnInit {
   uuid: number;
   answers = [];
   inputValue = '';
+  buttonText: string;
 
   constructor(
     private questionService: QuestionService,
@@ -24,6 +25,7 @@ export class AnswerTypeComponent implements OnInit {
   ngOnInit() {
     this.questionService.currentQuestion.subscribe((current) => {
       this.currentQuestion = current;
+      this.buttonText = this.currentQuestion !== this.questionsLength ? 'Volgende' : 'verstuur';
     });
     this.questionsLength = this.questionService.amountOfQuestions - 1;
     this.questionService.currentQuestion.emit(0);

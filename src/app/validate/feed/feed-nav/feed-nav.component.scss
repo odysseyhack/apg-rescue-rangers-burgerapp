@@ -1,0 +1,9 @@
+@import '../../../../styles.scss';
+
+.block {
+    width: 100vw;
+    background-color: $app-red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

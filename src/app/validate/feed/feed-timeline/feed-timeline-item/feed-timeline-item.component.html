@@ -1,0 +1,26 @@
+<div class="timeline-item">
+	<span class="timeline-item__dot" [ngClass]="index === 0 ? 'active' : ''"></span>
+	<div class="timeline-item__content">
+		<p class="timeline-item__timestamp">35 sec geleden</p>
+		<h4>{{ timelineData.timelineContent.title }}</h4>
+		<div [ngSwitch]="timelineData.timelineContent.content.type" class="timeline-item__data">
+			<div *ngSwitchCase="'img'" class="timeline-item__content--img">
+				<img src="{{ timelineData.timelineContent.content.link }}" alt="Foto van incident" />
+				<a class="timeline-item__content--zoom">
+					<img src="../../../../../assets/img/plus.svg" alt="plus icon" />
+				</a>
+			</div>
+			<div *ngSwitchCase="'voice'" class="timeline-item__content--voice">
+				<img src="../../../../../assets/img/waveform.svg" alt="Foto van incident" />
+				<a class="timeline-item__content--zoom">
+					<img src="../../../../../assets/img/plus.svg" alt="plus icon" />
+				</a>
+			</div>
+			<div *ngSwitchCase="'text'" class="timeline-item__content--text">
+				<p>{{ timelineData.timelineContent.content.text }}</p>
+			</div>
+		</div>
+	</div>
+	<button class="timeline-item__btn">True</button>
+	<button class="timeline-item__btn">False</button>
+</div>

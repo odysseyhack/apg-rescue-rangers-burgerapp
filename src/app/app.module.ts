@@ -18,6 +18,9 @@ import { TimelineItemComponent } from './inform/timeline/timeline-item/timeline-
 import { ModalComponent } from './modal/modal.component';
 import { HomeComponent } from './home/home.component';
 import { FeedComponent } from './validate/feed/feed.component';
+import { FeedNavComponent } from './validate/feed/feed-nav/feed-nav.component';
+import { FeedTimelineComponent } from './validate/feed/feed-timeline/feed-timeline.component';
+import { FeedTimelineItemComponent } from './validate/feed/feed-timeline/feed-timeline-item/feed-timeline-item.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { FeedComponent } from './validate/feed/feed.component';
     TimelineItemComponent,
     ModalComponent,
     HomeComponent,
-    FeedComponent
+    FeedComponent,
+    FeedNavComponent,
+    FeedTimelineComponent,
+    FeedTimelineItemComponent
   ],
   imports: [
     BrowserModule,
