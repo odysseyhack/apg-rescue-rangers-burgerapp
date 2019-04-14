@@ -14,10 +14,7 @@ export class Timeline {
     public date: number;
     public timelineContent: TimelineContent;
 
-    constructor(
-        incident: string, location: string, date: number,
-        timelineContent: TimelineContent, timelineValidate: boolean
-    ) {
+    constructor(incident: string, location: string, date: number, timelineContent: TimelineContent, timelineValidate: boolean) {
         this.timelineValidate = timelineValidate;
         this.incident = incident;
         this.location = location;
