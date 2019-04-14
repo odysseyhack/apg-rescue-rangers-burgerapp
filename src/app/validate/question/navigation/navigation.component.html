@@ -1,3 +1,4 @@
-<p>
-  navigation works!
-</p>
+<ul>
+  <div class="line"></div>
+  <li *ngFor="let dot of questionsLength; let i = index" [attr.data-id]="i" [ngClass]="i === currentQuestion ? 'active' : ''" class="dot"></li>
+</ul>

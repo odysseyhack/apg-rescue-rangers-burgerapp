@@ -1,0 +1,54 @@
+ul {
+    position: relative;
+    display: table;
+    margin: 0;
+    padding: 10px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    list-style: none;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.dot[data-id="0"] {
+    margin-left: -10px;
+}
+
+.active {
+    box-shadow: white;
+    animation: pulse 2s infinite;
+}
+
+.active:hover {
+    animation: none;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255, .8);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255,255,255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+    }
+}
+
+.line {
+    border-bottom: 2px dashed white;
+    width: 100%;
+    top: 11px;
+    left: -10px;
+    position: relative;
+}

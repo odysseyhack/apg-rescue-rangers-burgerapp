@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { QuestionService } from '../question.service';
+import { Question } from '../question.model';
 
 @Component({
   selector: 'app-navigation',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
+  @Input() currentQuestion: number;
+  questionsLength: Question[];
 
-  constructor() { }
+  constructor(private questionService: QuestionService) { }
 
   ngOnInit() {
+    this.questionsLength = this.questionService.getQuestions();
   }
 
 }
