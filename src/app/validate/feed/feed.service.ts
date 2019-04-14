@@ -12,9 +12,9 @@ export class FeedService {
     this.timelineData = [
       {
         generalContent: {
-          incident: 'Brand distributie centrum',
+          incident: 'Zware storm Hoek van Holland',
           timelineValidate: false,
-          location: 'Landhaven 1, Kampen',
+          location: 'Haakweg 40, Hoek van holland',
           date: 1555212798001,
         },
         timelineContent: {
@@ -28,8 +28,8 @@ export class FeedService {
       {
         generalContent: {
           timelineValidate: true,
-          incident: 'Brand distributie centrum',
-          location: 'Landhaven 1, Kampen',
+          incident: 'Zware storm Hoek van Holland',
+          location: 'Haakweg 40, Hoek van holland',
           date: 1555202998001,
         },
         timelineContent: {

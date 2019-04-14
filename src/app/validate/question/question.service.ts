@@ -11,15 +11,15 @@ export class QuestionService {
   constructor() {
     this.questions = [{
       id: 1026684904749387776,
-      question: 'Heeft u een raar geluid waargenomen?',
+      question: 'Heeft u bomen op de weg zien liggen?',
       questionType: 'statement'
     },{
       id: 1026655799286923264,
-      question: 'Heeft u vuur waargenomen?',
+      question: 'Kunt u uw woning nog uit?',
       questionType: 'statement'
     },{
       id: 1026674423292669957,
-      question: 'Ruikt u een vreemde geur? zo ja, wat ruikt u?',
+      question: 'Hoe lang is de storm al voor u bezig?',
       questionType: 'text'
     }];
   }
