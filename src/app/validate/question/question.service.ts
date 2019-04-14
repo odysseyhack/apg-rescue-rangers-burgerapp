@@ -15,8 +15,8 @@ export class QuestionService {
       questionType: 'statement'
     },{
       id: 1026655799286923264,
-      question: 'Ruikt u een vreemde geur? zo ja, wat ruikt u?',
-      questionType: 'text'
+      question: 'Heeft u vuur waargenomen?',
+      questionType: 'statement'
     },{
       id: 1026674423292669957,
       question: 'Ruikt u een vreemde geur? zo ja, wat ruikt u?',
