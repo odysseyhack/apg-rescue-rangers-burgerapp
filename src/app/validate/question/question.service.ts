@@ -1,7 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { Question } from './question.model';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class QuestionService {
@@ -11,10 +10,16 @@ export class QuestionService {
 
   constructor() {
     this.questions = [{
+      id: 1026684904749387776,
       question: 'Heeft u een raar geluid waargenomen?',
       questionType: 'statement'
     },{
-      question: 'Wat voor geur ruikt u?',
+      id: 1026655799286923264,
+      question: 'Ruikt u een vreemde geur? zo ja, wat ruikt u?',
+      questionType: 'text'
+    },{
+      id: 1026674423292669957,
+      question: 'Ruikt u een vreemde geur? zo ja, wat ruikt u?',
       questionType: 'text'
     }];
   }
@@ -22,7 +27,6 @@ export class QuestionService {
   getQuestions() {
     this.amountOfQuestions = this.questions.length;
     return this.questions;
-    // API Request
   }
 
 }
